@@ -1,0 +1,3 @@
+QTableWidget {
+    gridline-color: gray;
+}

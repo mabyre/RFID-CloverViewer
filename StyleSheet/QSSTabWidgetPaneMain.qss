@@ -1,0 +1,8 @@
+/* QTabWidget::pane#tabWidget_Readers */
+QTabWidget::pane { /* The tab widget frame */
+    background-image: url(:/Images/logo_detoure.png);
+    border-width: 1px;
+    padding: 1px;
+    border-style: solid;
+    border-color: #898C95;
+}

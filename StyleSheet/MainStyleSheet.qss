@@ -1,0 +1,79 @@
+QWidget#dockWidget {
+    background-color: rgb(90, 173, 161);
+}
+
+QWidget#dockWidgetContent {
+    background-color: rgb(90, 173, 161);
+}
+
+QTabWidget::pane#GlobalSetupWidget {
+    background-color: #FFFFFF;
+    background-image: url(:/Images/logo_detoure.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    border-width: 1px;
+    padding: 1px;
+    border-style: solid;
+    border-color: #898C95;
+}
+
+QWidget#Console {
+    /*background-color: #FFFFFF;*/
+    /*background-color: #98D9D3;*/
+    /*background-color: #EBF8F6;*/
+    background-color: #C5EAE6;
+}
+
+QTabWidget::pane#tabWidget_Readers {
+    /*background-image: url(:/Images/transparence.png);*/
+    background-color: #FFFFFF;
+    border-width: 1px;
+    padding: 1px;
+    border-style: solid;
+    border-color: #898C95;
+}
+
+QWidget#tableWidget_History_Scripting_2 {
+    background-image: url(:/Images/transparence.png);
+    border-width: 1px;
+    padding: 1px;
+    border-style: solid;
+    border-color: #898C95;
+}
+
+QWidget#tableWidget_History_Scripting_3 {
+    background-image: url(:/Images/transparence.png);
+    border-width: 1px;
+    padding: 1px;
+    border-style: solid;
+    border-color: #898C95;
+}
+
+QWidget#tableWidget_History_Scripting_4 {
+    background-image: url(:/Images/transparence.png);
+    border-width: 1px;
+    padding: 1px;
+    border-style: solid;
+    border-color: #898C95;
+}
+
+QWidget#tableWidget_History_Scripting_All {
+    background-image: url(:/Images/transparence.png);
+    border-width: 1px;
+    padding: 1px;
+    border-style: solid;
+    border-color: #898C95;
+}
+
+QWidget#ReadersCOMTableWidget {
+    background-image: url(:/Images/transparence.png);
+    border-width: 1px;
+    padding: 1px;
+    border-style: solid;
+    border-color: #898C95;
+}
+
+QTableWidget#ReadersCOMTableWidget {
+    gridline-color: gray;
+}

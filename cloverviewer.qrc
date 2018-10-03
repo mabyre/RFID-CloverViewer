@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Icons/arrow_green.ico</file>
+        <file>Icons/arrow_red.ico</file>
+        <file>Icons/chisel_blue.ico</file>
+        <file>StyleSheet/StyleSheetLineEdit.qss</file>
+        <file>StyleSheet/CSSPushButton.qss</file>
+        <file>StyleSheet/QSSTabWidgetPaneMain.qss</file>
+        <file>Images/logo_detoure.png</file>
+        <file>StyleSheet/MainStyleSheet.qss</file>
+        <file>Images/transparence.png</file>
+        <file>StyleSheet/QSSTableWidget.qss</file>
+        <file>Icons/ineo.ico</file>
+    </qresource>
+</RCC>

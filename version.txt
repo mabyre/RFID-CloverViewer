@@ -1,0 +1,86 @@
+*** v3.0.4
+LogMode devenu opérationnel : on ne fait pas le log, si False
+ModeScript : Temps d'attente découpé en 100 ms
+
+*** v3.0.3
+correction "Open File" pour les Traces files et pour le fichier RTC Distant
+
+*** v3.0.2 - 26/01
+correction du bug "Open File"
+QUrl::fromUserInput( fileName )
+au lieu de 
+QUrl( fileName )
+correction icône transparente
+
+*** v3.0.1
+modification de l'îcones de l'application pour logo avec fond transparent
+label "Set RTC" devient "Set Local"
+
+*** v3.0.0 - 25/01/2016
+Livraison selon le bon de commande : PO/14246
+Corrections faites suite à une première livraison pour validation de l'UI le 15/01
+Création des boutons de script programmables
+Création de la commande "RTC Distant"
+
+*** v3.0 - 15/01/2016
+UI - Refonte de l'UI avec les commandes sur la fenêtre dockable.
+   - Les boutons de commandes sont factorisés dans la dockWidget de gauche
+   - TabReader avec "Script" remplacé par "Console"
+Trace - Menu contextuel sur TracePath
+ - Open : pour afficher la fichier directement dans l'application par défaut
+ - Delete : pour stopper les traces
+La petite fenêtre vide "mainToolBar" est supprimée
+Autocompletion : on ne supprimer que si la popup est visible BRY_08012016
+
+*** v2.1.2 - 10/12/2015
+Si des erreurs surviennent dans le parsing du fichier "readers_list" elles sont remontées
+à l'utilisateur
+
+*** v2.1.1
+Correction du bug "La suppression de Reader fait stopper l’application"
+la suppression des objets thread et semaphore crash l'application
+
+*** v2.1 - Décembre 2015
+évolution selon cahier des charges
+Le control "SLineEditAutocomplete" n'est utilisé que sur le reader1
+Le timer RepeatCommand n'est utilisé que sur le reader1
+Création d'un répertoire "log" pour héberger le fichier mainlog.txt
+
+*** 21/10/2015 - v2.0.1
+Correction du processus de Close pour ne pas lancer la Thread d'attente de fermeture 
+d'un reader qui ne serait pas connecté
+
+*** 21/10/2015 - v2.0
+Nouveau driver CSL, correction des beugs de "crash spontaneously"
+nouvelles thread de Read et de Write corrigent les bugs crashes de l'application
+protocol de Retry sur la WriteThread
+rationalisation des onglets readers, on n'afficheplus un reader que l'on ne peut pas connecter
+les îcones sont dans les ressources et ne se promènent plus dans le répertoire
+
+*** 21/09/2015 - v1.2
+Ajout d'une "Icone Red" et d'une "Icone Green" pour la gestion de l'état du bouton Send "Rouge" lorsque l'on est en train d'envoyer une trame
+"Vert" quand on peut envoyer à nouveau
+- suppression de la gestion du mutex devenue inutile (corrige un bug de crash lors de la fermeture de l'application)
+
+*** 11/09/2015 - v1.1
+Livraison version chantier "Resizable" l'UI se resize lors de la retaille de la fenêtre
+
+*** 23/07/2015 - v1.0.1
+L'onglet "Readers" permet de gérer la liste des Readers
+
+*** 17/07/2015 - v1.0.0
+On peut supprimer les fichiers completion_list_cmd.txt & completion_list_relay.txt. Ils seront recréés à la vollée.
+
+Plantage sans rien faire : à corriger, en mode débug, je vois un "segmentation fault" 
+sur une allocation mémoire. Soit on a dépasser la taille max, soit c'est un pb port COM -> mutex
+
+Affichage figé : c'est la CSL qui exécute la fonction de rafraichissement de l'UI hors la main n'est donnée qu'à la fin du cycle et l'affichage se fait tardivement
+Les boutons en bas à droite pour enregistrer des commandes : je ne trouve pas le moyen de la faire simplement
+
+Développement selon cahier des charges
+
+*** 25/06/2015 - v0
+génération en mode Release
+correction inversion des buffers en réception
+correction scroll down au mauvais moment
+correction alignement "D -> R" et "R->D"
