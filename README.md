@@ -1,4 +1,4 @@
-# RFID-CloverWiever
+# RFID-CloverViewer
 Configuration of a RFID network for communicate with RFID chips. It's a really nice project very trenddy, this was really hard job dealing with deep concepts of C language implementation. 
 
 Have a look, you will not be disappointed.
