@@ -1,5 +1,5 @@
 # RFID-CloverWiever
-Configuration of a RFID network for dialing with RFID chip
+Configuration of a RFID network for communicate with RFID chips. It's a really nice project very trenddy, this was really hard job dealing with deep concepts of language C implementation. Have a look, you will not be disappointed.
 
 # Environment
 * Qt Creator IDE 3.3.1
