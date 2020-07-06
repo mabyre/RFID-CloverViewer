@@ -2774,7 +2774,7 @@ void CloverViewer::on_ReadersCOMTableWidget_cellChanged(int row, int column)
 
             if ( CL_SUCCESS( status ) )
             {
-                // BUG_10122015 We start Threads only the fisrt time
+                // BUG_10122015 We start Threads only the fisrt time otherwize ...
                 if ( pReaderFromList->tSync.tThreadId4Read == NULL && pReaderFromList->tSync.tThreadId4Write == NULL )
                 {
                     status = cl_ReaderStartThreads( pReaderFromList );
