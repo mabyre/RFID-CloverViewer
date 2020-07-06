@@ -1,14 +1,14 @@
 /****************************************************/
-/*               CLOVER SECURED LAYER				*/
-/*				Ineo-Sense Copyright 2014			*/
+/*               CLOVER SECURED LAYER               */
+/*                 Copyright 2014                   */
 /****************************************************/
 /*  Name: cl_readers.c                              */
-/*											        */
+/*		                                    */
 /*  Created on: 1 avril 2015	                    */
 /*      Author: braby                               */
 /****************************************************/
 /* Description :                                    */
-/*													*/
+/*	                                            */
 /****************************************************/
 #include <string.h>
 #include <stdlib.h>
