@@ -3816,7 +3816,7 @@ void CloverViewer::on_pushButton_RemoveReader_clicked()
         return;
     }
 
-    // BRY_11122015
+    // BRY_11122015  
 //    // Ok the reader is disconnected but we must say cl_ReaderRemoveFromList it is connected
 //    // for it to close the connection
 //    pReader->eState = STATE_CONNECT;
