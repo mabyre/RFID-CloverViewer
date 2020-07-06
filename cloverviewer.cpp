@@ -111,7 +111,7 @@ CloverViewer::CloverViewer(QWidget *parent) :
 {
     as_trace_init(NULL);
 
-    e_Result    status 		= CL_ERROR;
+    e_Result    status         = CL_ERROR;
 
     // setup UI
     ui->setupUi(this);
@@ -543,19 +543,19 @@ void CloverViewer::ObjectsEnable()
 }
 
 /********************************************************************************/
-/* Name :  e_Result ClViewer_Data2Read_cb( void **ppReader, void **ppTuple ) */
-/* Description : custom callback on data reception for Reader 1				     */
-/*				a copy of data shall be done at t								*/
-/*                                                                            	*/
+/* Name :  e_Result ClViewer_Data2Read_cb( void **ppReader, void **ppTuple )    */
+/* Description : custom callback on data reception for Reader 1                 */
+/*                a copy of data shall be done at t                             */
+/*                                                                              */
 /********************************************************************************/
-/* Parameters:                                                                	*/
-/*  --------------                                                            	*/
-/*  In : void *pSem : semaphore to unlock                   					*/
-/* ---------------                                                            	*/
-/*  Out: none                                                                 	*/
-/* Return value: e_Result                                                      	*/
-/*                          * OK                                              	*/
-/*                          * ERROR: return if semaphore was not existing     	*/
+/* Parameters:                                                                  */
+/*  --------------                                                              */
+/*  In : void *pSem : semaphore to unlock                                       */
+/* ---------------                                                              */
+/*  Out: none                                                                   */
+/* Return value: e_Result                                                       */
+/*                          * OK                                                */
+/*                          * ERROR: return if semaphore was not existing       */
 /********************************************************************************/
 e_Result ClViewer_Data2Read_cb( void *pReader, void *pTuple, e_Result eStatus )
 {   
@@ -576,9 +576,9 @@ e_Result ClViewer_Data2Read_cb( void *pReader, void *pTuple, e_Result eStatus )
 *
 *   @brief : Data completion callback sent by porting layer
 *
-*  @param 	*pReader					( In ) Reader which issued the data
-*  @param	*pTuple						( In ) Tuple send to network
-*  @param	status						( In ) status of the send to network
+*  @param     *pReader                    ( In ) Reader which issued the data
+*  @param    *pTuple                        ( In ) Tuple send to network
+*  @param    status                        ( In ) status of the send to network
 *  @return e_Result
 * \n OK                        :  Result is OK
 * \n ERROR,                    : Failure on execution
@@ -935,21 +935,21 @@ void CloverViewer::updateCSLDataActivitySlot( bool bDataReceived, QString SReade
 /********************************************************************************/
 /* Name :  e_Result ClViewer_OTAProgress_cb ( clu32 eState, clvoid *pReader, clu32 u32Progress ) */
 /* Description : ota progress   :    if u32Progress = 0xFF => OTA Failed        */
-/*                                                                            	*/
+/*                                                                                */
 /********************************************************************************/
-/* Parameters:                                                                	*/
-/*  --------------                                                            	*/
+/* Parameters:                                                                    */
+/*  --------------                                                                */
 /*                                                                              */
-/* ---------------                                                            	*/
-/*  Out: none                                                                 	*/
-/* Return value: e_Result                                                      	*/
-/*                          * OK                                              	*/
-/*                          * ERROR: return if semaphore was not existing     	*/
+/* ---------------                                                                */
+/*  Out: none                                                                     */
+/* Return value: e_Result                                                          */
+/*                          * OK                                                  */
+/*                          * ERROR: return if semaphore was not existing         */
 /********************************************************************************/
 e_Result ClViewer_OTAProgress_cb( clu32 eState, clvoid *ptReader, clu32 u32Progress )
 {
-    e_Result 	eStatus = CL_ERROR;
-    t_Reader 	*pReader = ( t_Reader *)ptReader;
+    e_Result     eStatus = CL_ERROR;
+    t_Reader     *pReader = ( t_Reader *)ptReader;
 
     DEBUG_PRINTF("<< ClViewer_OTAProgress_cb %d\n", u32Progress);
 
@@ -986,24 +986,24 @@ e_Result ClViewer_OTAProgress_cb( clu32 eState, clvoid *ptReader, clu32 u32Progr
 /********************************************************************************/
 /* Name :  e_Result ClViewer_IOStateChanged_cb( void **ppReader, void **ppTuple ) */
 /* Description : reader status changed (CONNECT/DISCONNECT/ERROR....)           */
-/*                                                                            	*/
+/*                                                                                */
 /********************************************************************************/
-/* Parameters:                                                                	*/
-/*  --------------                                                            	*/
+/* Parameters:                                                                    */
+/*  --------------                                                                */
 /*                                                                              */
-/* ---------------                                                            	*/
-/*  Out: none                                                                 	*/
-/* Return value: e_Result                                                      	*/
-/*                          * OK                                              	*/
-/*                          * ERROR: return if semaphore was not existing     	*/
+/* ---------------                                                                */
+/*  Out: none                                                                     */
+/* Return value: e_Result                                                          */
+/*                          * OK                                                  */
+/*                          * ERROR: return if semaphore was not existing         */
 /********************************************************************************/
 e_Result ClViewer_IOStateChanged_cb( clvoid *pCtxt, clvoid *ptReader, clvoid *ptDevice, e_Result result )
 {            
 
-    e_Result 	eStatus = CL_ERROR;
-    t_Reader 	*pReader = ( t_Reader *)ptReader;
-    t_Device 	*pDevice = ( t_Device *)ptDevice;
-    cl8			*pDesc	=	CL_NULL;
+    e_Result     eStatus = CL_ERROR;
+    t_Reader     *pReader = ( t_Reader *)ptReader;
+    t_Device     *pDevice = ( t_Device *)ptDevice;
+    cl8            *pDesc    =    CL_NULL;
 
     DEBUG_PRINTF("<< ClViewer_IOStateChanged_cb");
     if ( ( !pCtxt ) & ( !pReader ) & ( !pDevice ) )
@@ -1029,7 +1029,7 @@ void CloverViewer::UpdateClViewReaderDeviceState( void *pCtxt, void *ptReader, v
 {
     t_Reader *pReader = ( t_Reader *)ptReader;
     t_Device *pDevice = ( t_Device *)ptDevice;
-    cl8			*pDesc	=	CL_NULL;
+    cl8            *pDesc    =    CL_NULL;
 
     if ( ( pReader == CL_NULL ) & (pCtxt == CL_NULL) & ( pDevice == CL_NULL )) return;
 
@@ -1049,16 +1049,16 @@ void CloverViewer::UpdateClViewReaderDeviceState( void *pCtxt, void *ptReader, v
     {
         switch ( pReader->eState )
         {
-            case ( STATE_INIT ):			/// indicates a reader is added to a list
+            case ( STATE_INIT ):            /// indicates a reader is added to a list
                 DEBUG_PRINTF2("UpdateClViewReaderDeviceState: Reader %s STATE_INIT", pDesc );
                 break;
-            case ( STATE_CONNECT ):		/// asks to connect a reader to its IOs layer, indicates that a reader was successfully connected to its IOs layer
+            case ( STATE_CONNECT ):        /// asks to connect a reader to its IOs layer, indicates that a reader was successfully connected to its IOs layer
                 DEBUG_PRINTF2("UpdateClViewReaderDeviceState: Reader %s: STATE CONNECT", pDesc );
                 break;
-            case ( STATE_DISCONNECT ):	/// asks to disconnect a reader from its IOs layer, indicates that a reader was successfully disconnected from its IOs layer
+            case ( STATE_DISCONNECT ):    /// asks to disconnect a reader from its IOs layer, indicates that a reader was successfully disconnected from its IOs layer
                 DEBUG_PRINTF2("UpdateClViewReaderDeviceState: Reader  %s: STATE DISCONNECT", pDesc );
                 break;
-            case ( STATE_ERROR ):		/// indicates that a reader got an error from its underlaying IOs layer
+            case ( STATE_ERROR ):        /// indicates that a reader got an error from its underlaying IOs layer
                 DEBUG_PRINTF2("UpdateClViewReaderDeviceState: Reader  %s: STATE ERROR", pDesc );
                 break;
             case ( STATE_DISCOVER ):
@@ -1083,16 +1083,16 @@ void CloverViewer::UpdateClViewReaderDeviceState( void *pCtxt, void *ptReader, v
     {
         switch ( pDevice->eState )
         {
-        case ( STATE_INIT ):			/// indicates a reader is added to a list
+        case ( STATE_INIT ):            /// indicates a reader is added to a list
             DEBUG_PRINTF2("State update from Device %s STATE_INIT", pDevice->aucLabel );
             break;
-        case ( STATE_CONNECT ):		/// asks to connect a reader to its IOs layer, indicates that a reader was successfully connected to its IOs layer
+        case ( STATE_CONNECT ):        /// asks to connect a reader to its IOs layer, indicates that a reader was successfully connected to its IOs layer
             DEBUG_PRINTF2("State update from Device %s: STATE CONNECT", pDevice->aucLabel );
             break;
-        case ( STATE_DISCONNECT ):	/// asks to disconnect a reader from its IOs layer, indicates that a reader was successfully disconnected from its IOs layer
+        case ( STATE_DISCONNECT ):    /// asks to disconnect a reader from its IOs layer, indicates that a reader was successfully disconnected from its IOs layer
             DEBUG_PRINTF2("State update from Device %s : STATE_DISCONNECT", pDevice->aucLabel );
             break;
-        case ( STATE_ERROR ):		/// indicates that a reader got an error from its underlaying IOs layer
+        case ( STATE_ERROR ):        /// indicates that a reader got an error from its underlaying IOs layer
             DEBUG_PRINTF2("State update from Device %s: STATE_ERROR", pDevice->aucLabel );
             break;
         default:
@@ -3469,10 +3469,10 @@ void CloverViewer::on_tableWidget_History_Scripting_8_doubleClicked(const QModel
 \*--------------------------------------------------------------------------*/
 void CloverViewer::ScriptCmdSendToCsl( QString aReaderName,  QString aCmdToSend )
 {
-    bool 		readerConnected = false;
-    t_Reader 	*pReader;
+    bool         readerConnected = false;
+    t_Reader     *pReader;
     t_clContext *pCtxt = CL_NULL;
-    e_Result 	status = CL_ERROR;
+    e_Result     status = CL_ERROR;
     t_Buffer    *pBuffForNet = CL_NULL;
     t_Tuple     *pTuple2Send = CL_NULL;
 
@@ -3771,7 +3771,7 @@ void CloverViewer::on_pushButton_AddReader_clicked()
 void CloverViewer::on_pushButton_RemoveReader_clicked()
 {
     t_Reader *pReader = CL_NULL;
-    e_Result 	status = CL_ERROR;
+    e_Result     status = CL_ERROR;
     QString friendlyName;
     int rowSelectedReader = -1;
 
